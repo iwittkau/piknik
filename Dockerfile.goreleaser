@@ -1,0 +1,9 @@
+FROM alpine:latest
+
+RUN apk --no-cache add ca-certificates
+
+ADD piknik /piknik
+
+ENTRYPOINT [ "/piknik" ]
+
+EXPOSE 8075
